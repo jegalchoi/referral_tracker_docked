@@ -23,8 +23,11 @@ default: &default
 
 development:
   <<: *default
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
   database: referral_tracker_development
-
+  
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -57,8 +60,11 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
   database: referral_tracker_test
-
+  
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
@@ -77,9 +83,8 @@ test:
 #
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
-#
-production:
+#production:
   <<: *default
   database: referral_tracker_production
-  username: referral_tracker
-  password: <%= ENV['REFERRAL_TRACKER_DATABASE_PASSWORD'] %>
+  username: admin
+  password: <%= ENV["APP_DATABASE_PASSWORD"] %>
