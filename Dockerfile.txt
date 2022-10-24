@@ -1,15 +1,15 @@
-FROM ruby:3.0.1
+FROM ruby:alpine
 ENV BUNDLER_VERSION=2.2.15
 
 RUN gem install bundler -v 2.2.15
 
-RUN mkdir /referral_tracker
-WORKDIR /referral_tracker
-
-EXPOSE 3000
+RUN mkdir /app
+WORKDIR /app
 
 COPY Gemfile Gemfile.lock ./
 
 RUN bundle check || bundle install
+
+EXPOSE 3000
 
 CMD ["/bin/sh"]
