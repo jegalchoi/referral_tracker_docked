@@ -8,7 +8,7 @@ WORKDIR /app
 
 COPY Gemfile Gemfile.lock ./
 
-RUN bundle check || bundle install
+RUN bundle install
 
 EXPOSE 3000
 
