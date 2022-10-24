@@ -6,7 +6,7 @@ RUN gem install bundler -v 2.2.15
 RUN mkdir /app
 WORKDIR /app
 
-COPY Gemfile Gemfile.lock ./
+COPY Gemfile ./
 
 RUN bundle install
 
