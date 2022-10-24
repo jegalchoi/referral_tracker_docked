@@ -1,8 +1,7 @@
 FROM ruby:alpine
 ENV BUNDLER_VERSION=2.2.15
 
-RUN sudo apt-get update && apt-get install -y nodejs
-RUN gem install bundler -v 2.2.15
+RUN gem install rails bundler -v 2.2.15
 
 RUN mkdir /app
 WORKDIR /app
