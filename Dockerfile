@@ -1,5 +1,5 @@
 FROM ruby:alpine
-NV BUNDLER_VERSION=2.2.15
+ENV BUNDLER_VERSION=2.2.15
 RUN gem install bundler -v 2.2.15
 
 RUN apk update && apk add nodejs yarn postgresql-client postgresql-dev tzdata build-base
