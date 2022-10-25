@@ -10,7 +10,7 @@ WORKDIR /app
 COPY Gemfile ./
 COPY Gemfile.lock ./
 
-RUN bundle install --deployment --without development test
+RUN bundle install
 COPY . /app
 
 RUN bundle exec rake yarn:install
