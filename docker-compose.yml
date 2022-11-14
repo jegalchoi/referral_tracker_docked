@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  db:
+  srv-captain--postgresql-db:
     env_file: .env
     image: postgres
     volumes:
