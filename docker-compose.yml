@@ -1,13 +1,13 @@
 version: '3.8'
 services:
-  db:
-    env_file: .env
-    image: postgres
-    restart: "no"
-    volumes:
-      - db_data:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
+  # db:
+    # env_file: .env
+    # image: postgres
+    # restart: "no"
+    # volumes:
+      # - db_data:/var/lib/postgresql/data
+    # ports:
+      # - "5432:5432"
   web:
     build: .
     restart: "no"
