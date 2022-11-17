@@ -45,5 +45,5 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   
-  config.hosts << '.referral-tracker.something.betheleye.win'
+  config.hosts << '.referral-tracker-2.something.betheleye.win'
 end
